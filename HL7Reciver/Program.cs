@@ -17,8 +17,8 @@ namespace HL7Reciver
 
         public static async void SaveToDb(List<string> data, List<string> sendBack, bool isSuccess)
         {
-            var strData = string.Join((char)13, data);
-            var strSendBack = string.Join((char)13, data);
+            var strData = string.Join("", data);
+            var strSendBack = string.Join("", data);
 
             using var s = new MahasConnection(ConString);
             s.OpenTransaction();
